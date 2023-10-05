@@ -1,0 +1,165 @@
+body {
+  background: rgb(10, 0, 37);
+  background: linear-gradient(
+    90deg,
+    rgba(10, 0, 37, 1) 0%,
+    rgba(66, 34, 78, 1) 50%,
+    rgba(42, 18, 46, 1) 100%
+  );
+  margin: 2rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.smol {
+  font-size: 0.8rem;
+}
+
+#hero {
+  display: grid;
+}
+
+#hero h1,
+#hero button {
+  margin-bottom: 3rem;
+}
+
+header {
+  height: 3rem;
+  margin: -2rem;
+  margin-bottom: 3rem;
+  display: grid;
+  justify-content: center;
+}
+
+header img {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem;
+}
+
+#card_container {
+  display: grid;
+}
+
+#card_container img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -2px 5px;
+}
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -2px, rgba(58, 65, 111, 0.5) 0 -2px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29 a {
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  text-decoration: none;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -2px, #3c4fe0 0 -2px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -2px, #3c4fe0 0 -2px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.da_rules .rules_container {
+  margin: auto -2rem auto -2rem;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.da_rules .rules_container img {
+  height: 25rem;
+  margin: 1rem;
+}
+
+#play .top {
+  display: grid;
+}
+
+#play .top h1 {
+  margin-top: -1rem;
+}
+
+#play a {
+  margin-top: 1rem;
+}
+
+#play .da_rules {
+  margin-top: 3rem;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  background-color: rgba(42, 18, 46, 1);
+  padding: 5rem;
+  margin: -2rem;
+  margin-top: 3rem;
+}
