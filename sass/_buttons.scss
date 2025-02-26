@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+button {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    background: url("/buttons/play-button.png") no-repeat center;
+    background-size: cover;
+    width: 240px;
+    height: 80px;
+    position: relative;
+
+    &:hover {
+        filter: brightness(1.2); // Slight glow effect on hover
+        transform: scale(1.05);
+    }
+
+
+    &:active {
+        filter: brightness(0.9); // Slight press effect
+    }
+}

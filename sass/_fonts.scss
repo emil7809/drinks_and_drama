@@ -1,0 +1,15 @@
+// Import Google Font if needed
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; // Regular weight
+    line-height: 1.4; // Improves readability
+    text-align: center; // Centers text
+    color: white; // Ensure visibility over dark backgrounds
+    margin: 10px auto; // Centers it with spacing
+
+    // Optional: Subtle text shadow for better readability
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}

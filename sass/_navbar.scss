@@ -1,0 +1,115 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: transparent;
+
+
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+        flex: 1; // ✅ Distributes space equally
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 10px; // ✅ Adds space on the left
+    }
+
+    .nav-right {
+        display: flex;
+        justify-content: flex-end;
+        gap: 14px; // ✅ Slightly increase spacing between icons
+        padding-right: 10px; // ✅ Adds space on the right
+    }
+
+    .nav-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px; // ✅ Ensures logo is correctly aligned
+    }
+
+    .nav-logo {
+        width: 40px; // ✅ Slightly larger to match Figma
+        height: auto;
+    }
+
+    .nav-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px; // ✅ Adds even spacing between icons
+
+        img {
+            width: 26px; // ✅ Reduce size slightly
+            height: 26px;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .play-button {
+        background: url("/buttons/play-button.png") no-repeat center;
+        background-size: contain;
+        width: 85px; // ✅ Slightly wider for better proportions
+        height: 32px; // ✅ Slightly taller
+        border: none;
+        cursor: pointer;
+
+        font-family: "Cinzel", serif; // ✅ Ensures correct font
+        font-size: 0.9rem; // ✅ Matches reference better
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); // ✅ Keeps text readable
+
+        padding-bottom: 15px; // ✅ Helps center the text inside
+
+    }
+
+
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 20, 0.8);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translateY(-5px);
+    animation: navbarFade 0.1s ease-in-out forwards;
+}
+
+// 🎬 Animation for smooth navbar entrance
+@keyframes navbarFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

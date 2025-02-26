@@ -9,3 +9,13 @@ body {
     background-attachment: fixed; */
 
 }
+
+img {
+    width: 100%;
+}
+
+.page_content {
+    max-width: 1200px; // Controls the width of content
+    margin: 0 auto; // Centers everything
+    padding: 0px 1.5rem; // Adds space without affecting backgrounds
+}
