@@ -48,3 +48,7 @@
     margin: 0 auto 20px auto; // Centers the image */
     filter: drop-shadow(2px 1.2px 5px rgba(0, 0, 0, 0.7));
 }
+
+.page_content {
+    transform: translateY(-3rem); // Adjust the value as needed
+}

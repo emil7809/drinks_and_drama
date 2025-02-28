@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 
 import './app.scss'
 import Navbar from "./components/navbar";
-
-
+import BottomNavbar from "./components/bottomnavbar";
 
 export const metadata: Metadata = {
   title: "Drinks & Drama",
@@ -20,6 +19,7 @@ export default function RootLayout({
       <body >
         <Navbar />
         {children}
+        <BottomNavbar />
       </body>
     </html>
   );

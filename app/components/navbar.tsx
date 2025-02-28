@@ -8,7 +8,6 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log("ScrollY:", window.scrollY); // ✅ Check if scroll event works
             if (window.scrollY > 50) {
                 setScrolled(true);
             } else {
