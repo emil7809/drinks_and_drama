@@ -1,0 +1,54 @@
+#cards_hero {
+    &::before {
+        background-image: url("/bacrounds/bgcards.jpg");
+        opacity: 0.1;
+    }
+
+    .page_content {
+        margin-top: 10rem;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -40px;
+        z-index: 15;
+        text-shadow:
+            2px 2px 4px rgba(0, 0, 0, 0.8),
+            /* Deep text shadow */
+            0 0 10px rgba(255, 255, 255, 0.8),
+            /* Soft glow */
+            0 0 20px rgba(255, 255, 255, 0.6),
+            /* Stronger glow */
+            0 0 30px rgba(255, 255, 255, 0.4);
+    }
+}
+
+#decks {
+    &::before {
+        background-image: url("/bacrounds/bgcards.jpg");
+        opacity: 0.2;
+    }
+
+    img {
+        width: 125px;
+        height: auto;
+        filter: drop-shadow(2px 1.2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    .page_content {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        justify-content: center;
+        max-width: 100%; // Prevents overflowing parent
+        width: 100%; // Ensures it takes full width of parent
+        padding: 0 1rem; // Adds some spacing inside the parent
+        box-sizing: border-box; // Ensures padding doesn’t cause overflow
+    }
+
+
+
+
+
+}
