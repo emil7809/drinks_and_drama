@@ -23,32 +23,73 @@
     }
 }
 
-#decks {
+#decks,
+#all_cards {
+    padding-top: 5rem;
+    justify-content: start;
+
     &::before {
         background-image: url("/bacrounds/bgcards.jpg");
         opacity: 0.2;
     }
 
     img {
-        width: 125px;
+        width: 160px;
         height: auto;
         filter: drop-shadow(2px 1.2px 4px rgba(0, 0, 0, 0.7));
     }
 
     .page_content {
-        margin-top: 5rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
-        justify-content: center;
-        max-width: 100%; // Prevents overflowing parent
-        width: 100%; // Ensures it takes full width of parent
-        padding: 0 1rem; // Adds some spacing inside the parent
-        box-sizing: border-box; // Ensures padding doesn’t cause overflow
+        gap: 0.5rem;
+        justify-content: center; // Default: Center align multiple images
+        justify-items: center;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        &.single-image {
+            justify-content: start;
+            justify-items: start;
+        }
     }
 
+    h3 {
+        font-size: 0.8rem;
 
+        text-align: start;
+        position: relative;
+    }
 
+    .deck_title {
+        display: flex;
+        align-items: center;
+        margin-top: -2.5rem;
+        justify-content: space-between;
+        padding: .3rem;
 
+        img {
+            width: 0.8rem;
+        }
+    }
+}
 
+#all_cards {
+    .page_content {
+        transform: unset;
+    }
+}
+
+.cards_filter {
+    display: flex;
+}
+
+#booster,
+#builder {
+    &::before {
+        background-image: url("/bacrounds/bgcards.jpg");
+        opacity: 0.2;
+    }
 }

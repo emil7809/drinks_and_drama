@@ -1,7 +1,9 @@
 export default function Builder() {
     return (
         <section id="builder">
-            <h2>Builder</h2>
+            <div className="page_content">
+                <h2>Comming Soon</h2>
+            </div>
         </section>
     )
 }
