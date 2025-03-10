@@ -28,7 +28,8 @@
 }
 
 #decks,
-#all_cards {
+#all_cards,
+#cards_view {
     padding-top: 5rem;
     justify-content: start;
 
@@ -84,7 +85,10 @@
     padding-top: 7rem;
 }
 
-#all_cards {
+#all_cards,
+#cards_view {
+    padding-bottom: 5rem;
+
     .page_content {
         transform: unset;
     }
@@ -99,5 +103,78 @@
     &::before {
         background-image: url("/bacrounds/bgcards.jpg");
         opacity: 0.2;
+    }
+}
+
+.back_and_deck_name {
+    width: 100%; // Ensure it spans the full width
+    max-width: 800px; // Prevent it from stretching too far
+    margin: 0 auto; // Center it horizontally
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Ensures even spacing
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: -1.6rem;
+
+    .clickable {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        img {
+            width: 40px !important;
+            height: auto;
+            margin-right: 0.4rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+        flex-grow: 1; // Ensures it takes available space for proper centering
+        text-align: center; // Centers the text if needed
+    }
+}
+
+
+.selected_card_view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*  position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.448); // Adds a dark overlay
+    z-index: 999;
+
+    .selected_card {
+        width: 300px !important;
+        /* height: 700px !important; */
+
+    }
+
+    .clickable {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        font-size: 1.2rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 40px !important;
+            margin-right: 5px;
+        }
     }
 }

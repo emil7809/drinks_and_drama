@@ -23,6 +23,9 @@ export default function Cards() {
                 {activeSection === "builder" && <Builder />}
                 {activeSection === "all_cards" && <AllCards />}
             </main>
+            <footer>
+                <p>CVR</p>
+            </footer>
         </>
     );
 }
