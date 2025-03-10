@@ -304,17 +304,39 @@
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!CARDS NAVBAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .cards_nav {
-    position: fixed;
-    top: 50px; // Sticks under top navbar
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    /*  top: 50px; // Sticks under top navbar
+    left: 50%; */
+    /* backdrop-filter: blur(10px); */
+    /* transform: translateX(-50%); */
+    bottom: -5rem;
     width: 80%;
     max-width: 600px;
     background: rgba(0, 0, 0, 0.1); // Adds a slight background
-    backdrop-filter: blur(10px);
     transition: top 0.3s ease-in-out;
     height: 4rem;
     transition: none;
+
+    div {
+        // Apply styles to div instead of a
+        position: relative;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        cursor: pointer; // Ensures clicking is expected
+
+        &.active::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, #5A514C, #A89C8C, #D9C4A4, #F3E7C8, #D9C4A4, #A89C8C, #5A514C);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+    }
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!CARDS NAVBAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -358,9 +380,6 @@
             color: white;
             transition: transform 0.2s ease-in-out;
 
-            &:hover {
-                transform: scale(1.1);
-            }
         }
 
         img {

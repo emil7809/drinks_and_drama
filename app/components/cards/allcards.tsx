@@ -27,7 +27,8 @@ const AllCards = () => {
                         ]
                             .map(({ id, icon, label }) => (
                                 <li key={id}>
-                                    <a className={activeSection === id ? "active" : ""} onClick={() => setActiveSection(id)}>
+                                    <a className={activeSection === id ? "active" : ""}
+                                        onClick={() => setActiveSection(activeSection === id ? "" : id)}>
                                         <Image src={`/icons/${icon}`} alt={label} width={40} height={40} />
                                         <span>{label}</span>
                                     </a>
