@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
 
+import { useComingSoon } from "../commingsoon";
+
 export default function HomeHero() {
+    const { showPopup } = useComingSoon();
     return (
         <section id="home_hero">
             <div className="page_content">
@@ -10,7 +14,7 @@ export default function HomeHero() {
                     and probably some questionable decisions.
                     <br />
                     Let&apos;s go</p>
-                <button>Play</button>
+                <button onClick={showPopup}>Play</button>
             </div>
         </section>
     )

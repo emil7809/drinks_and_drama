@@ -7,6 +7,8 @@ import Booster from "../components/cards/booster";
 import Builder from "../components/cards/builder";
 import AllCards from "../components/cards/allcards";
 
+/* import CommingSoon from "../components/commingsoon"; */
+
 export default function Cards() {
     const [activeSection, setActiveSection] = useState("decks"); // Default to "Decks"
 
@@ -15,6 +17,9 @@ export default function Cards() {
             {/* Pass activeSection and setter to Navbar */}
 
             <main>
+
+                {/* <CommingSoon /> */}
+
                 <CardsHero />
                 <CardsNavbar activeSection={activeSection} setActiveSection={setActiveSection} />
                 {/* Render only the active section */}
