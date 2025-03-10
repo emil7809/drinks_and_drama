@@ -20,15 +20,22 @@ const AllCards = () => {
                     <ul>
                         {[
                             { id: "truth", icon: "truth.png", label: "Truth" },
+                            { id: "dare", icon: "dare.png", label: "Dare" },
+                            { id: "trap", icon: "trap.png", label: "Trap" },
+                            { id: "group_truth", icon: "group_truth.png", label: "Group Truth" },
+                            { id: "group_dare", icon: "group_dare.png", label: "Group Dare" },
                         ]
                             .map(({ id, icon, label }) => (
                                 <li key={id}>
-                                    <div className={activeSection === id ? "active" : ""} onClick={() => setActiveSection(id)}>
+                                    <a className={activeSection === id ? "active" : ""} onClick={() => setActiveSection(id)}>
                                         <Image src={`/icons/${icon}`} alt={label} width={40} height={40} />
                                         <span>{label}</span>
-                                    </div>
+                                    </a>
                                 </li>
                             ))}
+                        {/* <li>
+                            <span>0</span> <p>Cards</p>
+                        </li> */}
                     </ul>
                 </nav>
             </div>

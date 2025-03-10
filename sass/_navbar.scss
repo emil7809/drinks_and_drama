@@ -271,7 +271,8 @@
 }
 
 .home-nav,
-.cards_nav {
+.cards_nav,
+.cards_filter {
     ul {
         display: flex;
         justify-content: space-around;
@@ -317,6 +318,76 @@
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!CARDS NAVBAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Filter NAVBAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.cards_filter {
+    display: flex;
+    justify-content: center; // Centers all elements properly
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        gap: 1rem; // Adds spacing between items
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 0.9rem;
+        white-space: nowrap;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            width: 35px !important; // Reduce icon size
+            height: auto;
+            margin-bottom: 5px; // Add space between icon and text
+        }
+    }
+
+    // Fix "0 Cards" position
+    li:last-child {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-left: auto;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Filter NAVBAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 @media screen and (max-width: 600px),
