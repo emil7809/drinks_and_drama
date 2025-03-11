@@ -26,7 +26,10 @@ export default function Navbar() {
 
             <div className="nav-right">
                 <Link onClick={showPopup} href="#"><Image src="/icons/search-icon.png" alt="Search" width={30} height={30} /></Link>
-                <Link href="#"><Image src="/icons/cart-icon.png" alt="Cart" width={30} height={30} /></Link>
+                <div className="nav_cart">
+                    <span>1</span>
+                    <Link href="#"><Image src="/icons/cart-icon.png" alt="Cart" width={30} height={30} /></Link>
+                </div>
                 <Link onClick={showPopup} href="#"><Image src="/icons/profile-icon.png" alt="Profile" width={30} height={30} /></Link>
             </div>
         </nav>

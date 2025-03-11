@@ -76,7 +76,6 @@
         }
     }
 
-
 }
 
 
@@ -336,6 +335,20 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
+    }
+}
+
+#shop .cards_nav {
+    top: 5rem;
+
+    span {
+        display: block;
+        text-align: center;
+        white-space: nowrap; // Prevents text from breaking into multiple lines
+    }
+
+    .cart-count {
+        text-align: start;
     }
 }
 

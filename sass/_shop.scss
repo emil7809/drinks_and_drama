@@ -1,0 +1,69 @@
+#shop_decks,
+#merch,
+#loot,
+#cart {
+    &::before {
+        background-image: url("/bacrounds/bgshop.jpg");
+        opacity: 0.2;
+        filter: brightness(0.7) contrast(1.4);
+    }
+}
+
+#shop_decks {
+    padding-top: 11.5rem;
+    justify-content: start;
+
+    img {
+        width: 160px;
+        height: auto;
+        filter: drop-shadow(2px 1.2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    .page_content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+        justify-content: center; // Default: Center align multiple images
+        justify-items: center;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        &.single-image {
+            justify-content: start;
+            justify-items: start;
+        }
+    }
+
+    h3,
+    p {
+        font-size: 0.8rem;
+        text-align: start;
+        position: relative;
+        filter: drop-shadow(2px 1.2px 4px rgba(0, 0, 0, 0.7));
+        margin: 0;
+    }
+
+    .deck_title {
+        display: flex;
+        align-items: center;
+        margin-top: -2.5rem;
+        justify-content: space-between;
+        padding: 0 .5rem;
+
+        img {
+            width: 1.3rem;
+            filter: brightness(1.4) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+        }
+
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+#shop #cards_view {
+    padding-top: 9rem;
+}

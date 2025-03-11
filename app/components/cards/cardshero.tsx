@@ -26,7 +26,7 @@ export default function CardsHero() {
                 </div>
                 <h2>The First Deck</h2>
                 <p>Welcome to the realm of Drinks & Drama, where each card unlocks a world of unique rules, ranging from hilarious antics like &quot;Grab the nearest book and read a sentence with your best Snape impression&quot; to thought-provoking questions like &quot;If you could get away with a crime, what would you do?&quot;</p>
-                <button>Shop</button>
+                <a href="/shop"><button>Shop</button></a>
             </div>
         </section>
     )
