@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useCart } from "@/app/context/cartcontext";
 
 const ShopNavbar = ({
     activeSection,
@@ -9,6 +10,7 @@ const ShopNavbar = ({
     activeSection: string;
     setActiveSection: (section: string) => void;
 }) => {
+    const { cartCount } = useCart();
     return (
         <nav className="cards_nav">
             <ul>
@@ -24,7 +26,8 @@ const ShopNavbar = ({
                             onClick={() => setActiveSection(id)}
                         >
                             {id === "cart" && (
-                                <span className="cart-count">1</span>
+                                <span className="cart-count">
+                                    {cartCount > 0 && <span className="cart-count">{cartCount}</span>}</span>
                             )}
                             <Image src={`/icons/${icon}`} alt={label} width={40} height={40} />
                             <span>{label}</span>

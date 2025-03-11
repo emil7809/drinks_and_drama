@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ComingSoonProvider } from "./components/commingsoon"; // ✅ Import the provider
+import { CartProvider } from "./context/cartcontext";
 import "./app.scss";
 import Navbar from "./components/navbar";
 import BottomNavbar from "./components/bottomnavbar";
@@ -17,9 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ComingSoonProvider> {/* ✅ Now it wraps EVERYTHING */}
-          <Navbar />
-          {children} {/* ✅ Now Home Page AND other pages can trigger the pop-up */}
-          <BottomNavbar />
+          <CartProvider>
+            <Navbar />
+            {children} {/* ✅ Now Home Page AND other pages can trigger the pop-up */}
+            <BottomNavbar />
+          </CartProvider>
         </ComingSoonProvider>
       </body>
     </html>
