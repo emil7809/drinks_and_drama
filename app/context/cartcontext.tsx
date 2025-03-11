@@ -9,16 +9,29 @@ type CartItem = {
     image: string;
 };
 
+
 type CartContextType = {
     cart: CartItem[];
     addToCart: (item: CartItem) => void;
     removeFromCart: (id: string) => void;
+    updateQuantity: (id: string, quantity: number) => void;
     cartCount: number;
 };
 
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+
 export function CartProvider({ children }: { children: ReactNode }) {
+    const updateQuantity = (id: string, quantity: number) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+            )
+        );
+    };
+
+
     const [cart, setCart] = useState<CartItem[]>([]);
 
     const addToCart = (item: CartItem) => {
@@ -42,7 +55,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount, updateQuantity }}>
             {children}
         </CartContext.Provider>
     );
