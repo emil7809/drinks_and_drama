@@ -86,7 +86,14 @@ export default function Cart() {
                             <p>Total</p>
                             <span>{totalPrice} kr</span>
                         </div>
-                        <button onClick={() => setShowCheckout(true)}>Checkout</button>
+                        <button
+                            onClick={() => cart.length > 0 && setShowCheckout(true)}
+                            disabled={cart.length === 0}
+                            className={cart.length === 0 ? "disabled-btn" : ""}
+                        >
+                            Checkout
+                        </button>
+
                     </div>
                 </section>
             ) : (

@@ -1,3 +1,5 @@
+@use "colors";
+
 #shop_decks,
 #merch,
 #loot,
@@ -147,37 +149,31 @@
 
 }
 
-form {
-    width: 100%;
-
-    .form-group {
-        margin: 0 2rem;
-        display: grid;
-        align-items: flex-start;
-
-        label {
-            text-align: left;
-            width: 100%;
-        }
-
-        input {
-            all: unset;
-            width: 100%;
-            text-align: left;
-            backdrop-filter: blur(20px);
-
-            font-family: 'Lato', sans-serif;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 300;
-            text-decoration: none;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-
-            border: 1px solid transparent;
-
-            /*  border-image-source: */
-        }
-    }
 
 
+#card_shipping_form:has(.shipping-form) {
+    padding: 8rem 0;
+}
+
+#card_shipping_form:has(.checkout-form) {
+    padding: 4rem 0;
+}
+
+#card_shipping_form:has(.order-review) {
+    padding: 5rem 0;
+}
+
+#card_shipping_form:has(.order-review) {
+    padding: 43% 0;
+}
+
+.order-review,
+.order-confirmed {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.order-review p,
+.order-confirmed p {
+    font-size: 1.2rem;
 }

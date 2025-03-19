@@ -1,0 +1,89 @@
+form {
+    width: 100%;
+
+    .form-group {
+        margin: 0 2rem;
+        display: grid;
+        align-items: flex-start;
+
+        label {
+            text-align: left;
+            width: 100%;
+            margin-bottom: -0.7rem;
+            margin-left: 0.5rem;
+            z-index: 99;
+        }
+
+        input {
+            all: unset;
+            text-align: left;
+            font-family: 'Lato', sans-serif;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+            padding: 0.6rem 1rem;
+
+            /* Apply the blur effect */
+            background: rgba(0, 0, 0, 0.01);
+            /* Dark transparent background */
+            backdrop-filter: blur(20px);
+            /* Blurs only the background */
+
+            /* Fancy border */
+            border: 1px solid transparent;
+            border-image-source: linear-gradient(90deg, #5E3033 0%, #985727 7%, #C5944F 33%, #F6E6B7 47%, #C7934D 60%, #965525 92%, #5E3033 100%);
+            border-image-slice: 1;
+            border-radius: 8px;
+
+            /* 🪄 Glow effect on focus */
+            &:focus {
+                border-image-source: linear-gradient(90deg, #F6E6B7 0%, #C5944F 50%, #985727 100%);
+                box-shadow: 0px 0px 10px rgba(255, 223, 127, 0.6);
+            }
+        }
+    }
+}
+
+.card-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* 🏆 Forces fields to stack vertically */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 1rem 0 1rem;
+
+    /* ✅ Background Blur */
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(20px);
+    /* Blurs only the background */
+
+    /* 🎨 Fancy Border */
+    border: 1px solid transparent;
+    border-image-source: linear-gradient(90deg, #5E3033 0%, #985727 7%, #C5944F 33%, #F6E6B7 47%, #C7934D 60%, #965525 92%, #5E3033 100%);
+    border-image-slice: 1;
+    border-radius: 8px;
+
+    /* 🪄 Glow effect on focus */
+    &:focus-within {
+        border-image-source: linear-gradient(90deg, #F6E6B7 0%, #C5944F 50%, #985727 100%);
+        box-shadow: 0px 0px 10px rgba(255, 223, 127, 0.6);
+    }
+}
+
+/* ✅ Stripe Elements Input Fields */
+.StripeElement {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+    width: 100%;
+    text-align: left;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+
+    /* 🏆 Force block layout so fields don’t go inline */
+    display: block;
+    margin-bottom: 1rem;
+    /* Adds space between each field */
+}

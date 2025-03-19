@@ -9,29 +9,18 @@ type CartItem = {
     image: string;
 };
 
-
 type CartContextType = {
     cart: CartItem[];
     addToCart: (item: CartItem) => void;
     removeFromCart: (id: string) => void;
     updateQuantity: (id: string, quantity: number) => void;
+    clearCart: () => void;  // 🏆 Add clearCart function
     cartCount: number;
 };
 
-
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-
 export function CartProvider({ children }: { children: ReactNode }) {
-    const updateQuantity = (id: string, quantity: number) => {
-        setCart((prevCart) =>
-            prevCart.map((item) =>
-                item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
-            )
-        );
-    };
-
-
     const [cart, setCart] = useState<CartItem[]>([]);
 
     const addToCart = (item: CartItem) => {
@@ -52,10 +41,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
         setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== id));
     };
 
+    const updateQuantity = (id: string, quantity: number) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+            )
+        );
+    };
+
+    // 🏆 Function to clear the cart after order confirmation
+    const clearCart = () => {
+        setCart([]);  // Empty cart
+    };
+
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount, updateQuantity }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, cartCount }}>
             {children}
         </CartContext.Provider>
     );
