@@ -2,6 +2,12 @@
     display: none;
 }
 
+.hide {
+    opacity: 0;
+    pointer-events: none;
+
+}
+
 .card_fan {
     display: flex;
     justify-content: center;

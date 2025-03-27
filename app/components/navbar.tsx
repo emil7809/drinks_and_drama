@@ -1,6 +1,7 @@
 "use client";
 import { useComingSoon } from "./commingsoon"; // ✅ Import the hook
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useCart } from "../context/cartcontext";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,12 +17,19 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const pathname = usePathname();
+    const isPlayPage = pathname === "/play";
+
+
     return (
         <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
             <div className="nav-left">
-                <Link href="/play">
-                    <button className="play-button">Play</button> {/* ✅ Calls global pop-up */}
+                <Link href={isPlayPage ? "/" : "/play"}>
+                    <button className={isPlayPage ? "play-button_play" : "play-button"}>
+                        {isPlayPage ? "Leave Game" : "Play"}
+                    </button>
                 </Link>
+
             </div>
 
             <div className="nav-center">
@@ -30,7 +38,7 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <div className="nav-right">
+            <div className={`nav-right ${isPlayPage ? "hide" : ""}`}>
                 <Link onClick={showPopup} href="#"><Image src="/icons/search-icon.png" alt="Search" width={30} height={30} /></Link>
                 <div className="nav_cart">
                     {cartCount > 0 && <span className="cart-count">{cartCount}</span>}

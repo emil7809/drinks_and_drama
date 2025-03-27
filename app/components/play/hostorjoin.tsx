@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 
-export default function HostOrJoin() {
+export default function HostOrJoin({ onChoice }: { onChoice: (choice: "host" | "join") => void }) {
     return (
         <>
             <section id="hostorjoin">
@@ -10,9 +10,9 @@ export default function HostOrJoin() {
                     <Image src="/full_logo.png" alt="Drinks & Drama full logo" className="full_logo" layout="intrinsic" width={600} height={300} />
                     <div className="host_button">
                         <Image src="/icons/host.png" alt="Host Crown" className="crown" layout="intrinsic" width={30} height={30} />
-                        <button>Host</button>
+                        <button onClick={() => onChoice("host")}>Host</button>
                     </div>
-                    <button>Join</button>
+                    <button onClick={() => onChoice("join")}>Join</button>
                 </div>
             </section>
         </>

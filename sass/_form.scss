@@ -45,6 +45,16 @@ form {
     }
 }
 
+.input-field {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.01);
+    transition: filter 0.05s;
+
+    &.blur-fixed {
+        filter: brightness(1); // nudges rendering engine
+    }
+}
+
 .card-input {
     position: relative;
     display: flex;

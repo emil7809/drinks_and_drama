@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { ComingSoonProvider } from "./components/commingsoon"; // ✅ Import the provider
+import { ComingSoonProvider } from "./components/commingsoon";
 import { CartProvider } from "./context/cartcontext";
 import "./app.scss";
 import Navbar from "./components/navbar";
-import BottomNavbar from "./components/bottomnavbar";
+import BottomWrapper from "./components/bottomnavwrapper";
 
 export const metadata: Metadata = {
   title: "Drinks & Drama",
@@ -17,11 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ComingSoonProvider> {/* ✅ Now it wraps EVERYTHING */}
+        <ComingSoonProvider>
           <CartProvider>
             <Navbar />
-            {children} {/* ✅ Now Home Page AND other pages can trigger the pop-up */}
-            <BottomNavbar />
+            {children}
+            <BottomWrapper />
           </CartProvider>
         </ComingSoonProvider>
       </body>

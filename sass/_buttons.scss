@@ -28,7 +28,8 @@ button {
     }
 }
 
-.play-button {
+.play-button,
+.play-button_play {
     background: url("/buttons/play-button.png") no-repeat center;
     background-size: contain;
     width: 85px; //  Slightly wider for better proportions
@@ -49,4 +50,8 @@ button {
 
     padding-bottom: 15px; //  Helps center the text inside
 
+}
+
+.play-button_play {
+    font-size: 0.5rem;
 }

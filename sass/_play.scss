@@ -1,10 +1,30 @@
-#hostorjoin {
+#hostorjoin,
+#host_setup,
+#joining,
+#joiner_ready {
     &::before {
         background-image: url("/bacrounds/bgplay.jpg");
         opacity: 0.3;
 
         filter:
             blur(1.5px) brightness(0.7) contrast(1.2) saturate(1.2) sepia(0.05) hue-rotate(-10deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+    }
+
+    .clickable {
+        margin: 1rem;
+        display: flex;
+        justify-self: center;
+
+        img {
+            width: 2.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    input {
+        text-align: center;
+        width: 8rem;
+        justify-self: center;
     }
 }
 
@@ -19,5 +39,89 @@
         transform: translateX(-50%);
         top: 1rem;
         z-index: 10;
+    }
+}
+
+.playeres_avatars_container {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-self: center;
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .host_frame {
+        width: 100%;
+        position: relative;
+
+        .crown {
+            width: 1rem;
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -5;
+        }
+
+    }
+
+    .user_avatar_frame_container {
+        margin: 0.2rem;
+
+        .user_avatar_frame {
+            height: 4rem;
+            width: 3rem;
+        }
+    }
+}
+
+.user_avatar_frame_container {
+    margin: 0.2rem;
+
+    .user_avatar_frame {
+        height: 6rem;
+        width: 4.5rem;
+        border: 1px solid transparent;
+        border-image-source: linear-gradient(90deg, #5E3033 0%, #985727 7%, #C5944F 33%, #F6E6B7 47%, #C7934D 60%, #965525 92%, #5E3033 100%);
+        border-image-slice: 1;
+        border-radius: 8px;
+
+        background: rgba(0, 0, 0, 0.01);
+        backdrop-filter: blur(20px);
+    }
+}
+
+.play_bottom {
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#joiner_ready,
+#host_setup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // pushes top & bottom away
+    height: 100vh; // full screen height
+}
+
+.play_game_content {
+
+    .playin_deck {
+        justify-self: center;
+        width: 10rem;
+        height: auto;
+        display: block;
+    }
+}
+
+.path_solution_button {
+    button {
+        width: 9rem;
+        height: 3rem;
+        padding: 0;
+        font-size: 1.5rem;
     }
 }

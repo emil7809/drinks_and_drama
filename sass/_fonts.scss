@@ -1,7 +1,10 @@
+@use "colors";
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+
 
 p,
 li,
@@ -46,4 +49,25 @@ h1 {
 h2 {
     font-family: 'Cinzel Decorative', serif;
     font-size: 2rem;
+}
+
+.points {
+
+    span {
+        font-size: 4rem;
+        font-family: 'Cinzel Decorative', serif;
+        font-weight: 700;
+        background: colors.$boldgold;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+    }
+
+    p {
+        margin-top: -0.4rem;
+    }
+
 }
