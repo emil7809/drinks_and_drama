@@ -19,18 +19,22 @@ export default function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
             <div className="nav-left">
-                <button className="play-button" onClick={showPopup}>Play</button> {/* ✅ Calls global pop-up */}
+                <Link href="/play">
+                    <button className="play-button">Play</button> {/* ✅ Calls global pop-up */}
+                </Link>
             </div>
 
             <div className="nav-center">
-                <Image src="/icon_logo.png" alt="Drinks & Drama Logo" width={80} height={80} className="nav-logo" />
+                <Link href="/">
+                    <Image src="/icon_logo.png" alt="Drinks & Drama Logo" width={80} height={80} className="nav-logo" />
+                </Link>
             </div>
 
             <div className="nav-right">
                 <Link onClick={showPopup} href="#"><Image src="/icons/search-icon.png" alt="Search" width={30} height={30} /></Link>
                 <div className="nav_cart">
                     {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-                    <Link href="#"><Image src="/icons/cart-icon.png" alt="Cart" width={30} height={30} /></Link>
+                    <Link href="/shop?view=cart"><Image src="/icons/cart-icon.png" alt="Cart" width={30} height={30} /></Link>
                 </div>
                 <Link onClick={showPopup} href="#"><Image src="/icons/profile-icon.png" alt="Profile" width={30} height={30} /></Link>
             </div>

@@ -1,0 +1,23 @@
+#hostorjoin {
+    &::before {
+        background-image: url("/bacrounds/bgplay.jpg");
+        opacity: 0.3;
+
+        filter:
+            blur(1.5px) brightness(0.7) contrast(1.2) saturate(1.2) sepia(0.05) hue-rotate(-10deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+    }
+}
+
+.host_button {
+    position: relative;
+    display: inline-block;
+
+    img {
+        width: 1.8rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem;
+        z-index: 10;
+    }
+}

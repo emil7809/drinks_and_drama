@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+
 import ShopDecks from "../components/shop/decks";
 import Merch from "../components/shop/merch";
 import Loot from "../components/shop/loot";
@@ -8,7 +10,18 @@ import ShopNavbar from "../components/shop/shopnav";
 
 
 export default function Shop() {
-    const [activeSection, setActiveSection] = useState("decks");
+    const searchParams = useSearchParams();
+    const defaultSection = searchParams.get("view") || "decks";
+
+    const [activeSection, setActiveSection] = useState(defaultSection);
+
+    useEffect(() => {
+        const view = searchParams.get("view");
+        if (view) {
+            setActiveSection(view);
+        }
+    }, [searchParams]);
+
     return (
         <>
             <main id="shop">

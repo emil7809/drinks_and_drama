@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-import { useComingSoon } from "../commingsoon";
+
+/* import { useComingSoon } from "../commingsoon"; */
 
 export default function HomeHero() {
-    const { showPopup } = useComingSoon();
+    /*   const { showPopup } = useComingSoon(); */
+    const router = useRouter();
     return (
         <section id="home_hero">
             <div className="page_content">
@@ -14,7 +17,7 @@ export default function HomeHero() {
                     and probably some questionable decisions.
                     <br />
                     Let&apos;s go</p>
-                <button onClick={showPopup}>Play</button>
+                <button onClick={() => router.push('/play')}>Play</button>
             </div>
         </section>
     )
